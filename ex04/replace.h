@@ -7,5 +7,5 @@
 # include "stdlib.h"
 
 int get_input(char *filename, std::string &content);
-int get_output(std::string filename, std::string content);
+int get_output(std::string filename, std::string &content, std::string s1, std::string s2);
 #endif

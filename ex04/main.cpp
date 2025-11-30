@@ -2,8 +2,6 @@
 
 int main(int argc, char *argv[])
 {
-	// int fd1;
-	// int fd2;
 	(void)argc;
 	if(argc != 4)
 	{
@@ -17,11 +15,9 @@ int main(int argc, char *argv[])
 	}
 	std::string outfile_name = std::string(argv[1]) + ".replace";
 	
-	if(get_output(outfile_name, input) == 0){
+	if(get_output(outfile_name, input, argv[2], argv[3]) == 0){
 		std::cerr << "Error: could not create output file.\n";
 		return 0;
 	}
-	
-	// out_file << input;
 	return 0;
 }

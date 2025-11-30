@@ -2,6 +2,7 @@ CPP = c++
 FLAGS = -Wall -Wextra -Werror
 NAME = replace
 SRC =  $(shell find . -name "*.cpp")
+# SRC = main.cpp open_file.cpp
 OBJ = $(SRC:%.cpp=%.o)
 
 %.o: %.cpp
@@ -18,7 +19,7 @@ clean :
 fclean : clean	
 	@rm -rf $(NAME)
 
-re : fclean make
+re : fclean all
 
 .PHONY : all clean fclean re
 .SECONDARY : $(OBJ)
